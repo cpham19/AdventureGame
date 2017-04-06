@@ -1,0 +1,58 @@
+<html>
+
+<head>
+<!-- Used Google Chrome/Firefox -->
+<p>
+<b id="playerHealth"></b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<b id="playerCoordinates"></b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<b id="prizes"></b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<b id="gameState"></b>
+</p>
+<hr>
+
+<style>
+table, td, th {
+    width: 75px;
+	height: 40px;
+    border: 1px solid white;
+	background-color: red;
+}
+
+body {
+	background-image : url("background.jpg");
+	background-size: 1280px 720px;
+}
+
+</style>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="main.js"></script>
+<script>$(document).ready(function(){createTable();});</script>
+
+<body>
+<br/>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button onclick="validateChoice('up')">UP</button><br/>
+<button onclick="validateChoice('left')">LEFT</button><button onclick="validateChoice('right')">RIGHT</button> <b>NOTE: To battle an enemy, you walk to them (ex. if an enemy is on the right of you, you move right to right to fight the enemy)</b><br/>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button onclick="validateChoice('down')">DOWN</button>
+
+<div style="width: 100%;">
+   <div style="float:left; width: 50%" id ="gameBoard">
+   </div>
+   <div style="float:right; width: 50%; color: black; background-color: red" id = "gameLog">
+   </div>
+</div>
+<div style="clear:both"></div>
+
+<p>Background Music:</p>
+<audio controls loop id="audio">
+ 	<source src="battle.mp3" type="audio/mp3">
+</audio>
+
+<script>
+ 	var audio = document.getElementById("audio");
+ 	audio.volume = 0.3;
+</script>
+
+</body>
+</html>
